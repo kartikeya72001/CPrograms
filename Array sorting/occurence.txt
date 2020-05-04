@@ -1,0 +1,28 @@
+#include<stdio.h>
+#include<string.h>
+int main()
+{
+    int occr=0,length1=0,length2=0;
+    char txt[200],word[10];
+    printf("Enter the Passage\n");
+    gets(txt);
+    printf("Enter the word to look up\n");
+    gets(word);
+    length1=strlen(word);
+    length2=strlen(txt);
+    int i=0;
+    while(i<length1)
+    {
+       for(int j=0;txt[j]<length2;j++)
+       {
+              if(txt[j]==word[i])
+                {
+                     occr=occr++;
+                }
+       }
+       i++;
+    }
+
+    printf("The number of times the given word occurred is:%d\n",occr);
+    return 0;
+}

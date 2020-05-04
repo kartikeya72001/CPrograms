@@ -1,0 +1,73 @@
+// Example for getc() in C
+#include <stdio.h>
+#include <conio.h>
+int main()
+{
+   printf("%c", getc(stdin));
+
+/*It reads a single character from a given input stream
+ and returns the corresponding integer value (typically
+ASCII value of read character) on success.*/
+
+// Example for getchar() in C
+   printf("%c", getchar());
+   
+         OR
+
+#include <stdio.h>
+
+int main () {
+   char c;
+ 
+   printf("Enter character: \n");
+   c = getchar();
+ 
+   printf("Character entered: ");
+   putchar(c);
+
+   return(0);
+}
+
+/*The difference between getc() and getchar() is getc()
+can read from any input stream, but getchar() reads
+from standard input. So getchar() is equivalent to getc(stdin).*/
+
+
+// Example for getch() in C
+   printf("%c", getch());
+/*it reads also a single character from keyboard. But it does
+not use any buffer, so the entered character is immediately
+returned without waiting for the enter key.*/
+
+
+// Example for getche() in C
+  printf("%c", getche());
+  return 0;
+}
+
+/*Like getch(), this is also a non-standard function present
+in conio.h. It reads a single character from the keyboard
+and displays twice immediately on output screen without waiting for
+enter key.*/
+
+#include<stdio.h> 
+int main() 
+{ 
+    fputs("Geeksfor", stdout); 
+    fputs("Geeks", stdout);       //Prints in the same line.
+      
+    getchar(); 
+    return 0; 
+} 
+
+#include<stdio.h> 
+int main() 
+{ 
+    puts("Geeksfor");      //Prints in he next line, basically has an inbuilt \n.
+    puts("Geeks");         //Also works for % and other unexpected symbols that printf does not print
+      
+    getchar(); 
+    return 0; 
+} 
+
+
